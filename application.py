@@ -2,6 +2,7 @@
 Main Flask module.
 '''
 
+import os
 from flask import Flask, render_template, request, redirect
 import twitter_helper
 import webmap
@@ -28,7 +29,8 @@ def create_map():
 
         friends_map = webmap.create_map()
         webmap.place_markers(friends_map, friends_coordinates)
-        webmap.save_map(friends_map, 'templates/map.html')
+        webmap.save_map(friends_map, os.path.join(
+            os.path.dirname(__file__), 'templates/map.html'))
         return render_template('map.html')
 
 
