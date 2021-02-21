@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div id='submit-form'>
+    <h1 id="title">Followers Locations</h1>
+    <form action="/map" method="POST">
+        <div id="inner-form">
+            <input id="search-area" type="text" autocomplete="off" name='username'
+                placeholder="Enter Twitter username here...">
+            <input type="submit" value="Search" class="button">
+        </div>
+    </form>
+</div>
+{% endblock %}
