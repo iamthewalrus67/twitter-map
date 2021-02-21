@@ -2,6 +2,7 @@
 Module for working Twitter API.
 '''
 
+import os
 import requests
 import geo_helper
 
@@ -9,7 +10,7 @@ import geo_helper
 def get_user_friends(username, num_of_friends):
     base_url = 'https://api.twitter.com/'
 
-    with open('bearer_token', 'r') as token:
+    with open(os.path.join(os.path.dirname(__file__), 'bearer_token'), 'r') as token:
         bearer_token = token.read()
 
     search_url = f'{base_url}1.1/friends/list.json'
