@@ -39,8 +39,8 @@ def create_map() -> folium.Map:
     return folium_map
 
 
-def save_map(folium_map, path: str):
+def save_map(folium_map):
     '''
     Save map to file.
     '''
-    folium_map.save(path)
+    return folium_map._repr_html_()

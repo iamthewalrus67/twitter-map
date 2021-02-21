@@ -29,9 +29,7 @@ def create_map():
 
         friends_map = webmap.create_map()
         webmap.place_markers(friends_map, friends_coordinates)
-        webmap.save_map(friends_map, os.path.join(
-            os.path.dirname(__file__), 'templates/map.html'))
-        return render_template('map.html')
+        return webmap.save_map(friends_map)
 
 
 @app.route('/map')
@@ -45,4 +43,4 @@ def failure():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
