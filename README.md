@@ -6,7 +6,7 @@ Python website for viewing Twitter followers on the map.
 ## Usage
 Go to this [website](http://iamthewalrus.pythonanywhere.com) and enter a Twitter username of a user you want to see a map of followers for.
 ![Main Page](images/main_page.png)
-If you couldn't access the website, you can host in on your computer.
+If you couldn't access the website, you can host it on your computer.
 ```bash
 $ python application.py
 * Serving Flask app "application" (lazy loading)
