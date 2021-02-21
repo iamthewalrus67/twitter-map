@@ -2,7 +2,6 @@
 Module for finding coordinates.
 '''
 
-import math
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 from geopy.exc import GeocoderTimedOut
